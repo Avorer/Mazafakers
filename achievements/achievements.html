@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Достижения</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Audiowide&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --neon-green: #0f0;
+            --neon-red: #f00;
+            --neon-blue: #0ff;
+            --neon-pink: #f0f;
+            --neon-yellow: #ff0;
+            --dark-bg: #000;
+            --transparent-bg: rgba(0, 0, 0, 0.9);
+        }
+
+        body {
+            background-color: #000;
+            color: var(--neon-green);
+            font-family: 'Roboto Mono', monospace;
+            margin: 0;
+            padding: 0;
+            background-image: url('../img/index/phone.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .content-wrapper {
+            background-color: var(--transparent-bg);
+            border: 3px solid var(--neon-red);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 0 30px var(--neon-green);
+            text-align: center;
+        }
+
+        .back-button {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .back-button a {
+            color: var(--neon-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            border: 1px solid var(--neon-green);
+            padding: 8px 15px;
+            border-radius: 4px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .back-button a:hover {
+            background: var(--neon-red);
+            color: #000;
+            border-color: var(--neon-red);
+        }
+
+        h1 {
+            font-family: 'Press Start 2P', cursive;
+            color: var(--neon-yellow);
+            font-size: clamp(1.2rem, 5vw, 2rem);
+            margin-bottom: 40px;
+            line-height: 1.5;
+            text-shadow: 0 0 10px var(--neon-red);
+        }
+
+        .coming-soon {
+            font-size: clamp(1.5rem, 8vw, 3rem);
+            color: var(--neon-blue);
+            margin: 30px 0;
+            animation: blink 1.5s infinite;
+        }
+
+        .message {
+            color: #aaa;
+            font-size: 1.2rem;
+            margin: 30px 0;
+            line-height: 1.8;
+            border-left: 3px solid var(--neon-pink);
+            border-right: 3px solid var(--neon-pink);
+            padding: 20px;
+        }
+
+        .road {
+            height: 50px;
+            background: #111;
+            position: relative;
+            overflow: hidden;
+            margin: 40px 0 20px;
+            border: 2px solid var(--neon-green);
+            border-radius: 8px;
+        }
+
+        .road::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: repeating-linear-gradient(90deg, var(--neon-green), var(--neon-green) 15px, transparent 15px, transparent 30px);
+            transform: translateY(-50%);
+        }
+
+        .car {
+            position: absolute;
+            width: 80px;
+            height: 30px;
+            background: #444;
+            top: 10px;
+            border-radius: 6px;
+            animation: drive 5s linear infinite;
+            border: 1px solid var(--neon-red);
+        }
+
+        .car::before {
+            content: "LADA SPORT";
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            color: var(--neon-yellow);
+            font-size: 8px;
+            font-weight: bold;
+        }
+
+        .car::after {
+            content: "";
+            position: absolute;
+            right: -3px;
+            top: 5px;
+            width: 6px;
+            height: 15px;
+            background: var(--neon-red);
+            border-radius: 2px;
+        }
+
+        @keyframes drive {
+            0% { left: -100px; }
+            100% { left: 100%; }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; text-shadow: 0 0 10px var(--neon-blue); }
+            50% { opacity: 0.5; text-shadow: 0 0 20px var(--neon-pink); }
+        }
+
+        footer {
+            margin-top: 40px;
+            color: var(--neon-green);
+            font-size: 0.8rem;
+        }
+
+        footer a {
+            color: var(--neon-blue);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="back-button">
+                <a href="javascript:history.back()">← НАЗАД</a>
+            </div>
+
+            <h1>ДОСТИЖЕНИЯ</h1>
+            
+            <div class="coming-soon">
+                В РАЗРАБОТКЕ
+            </div>
+            
+            <div class="message">
+                Достижения команды Мазафакеры<br>
+                будут добавлены в следующих обновлениях.<br><br>
+                Следите за новостями господа!
+            </div>
+
+            <div class="road">
+                <div class="car"></div>
+            </div>
+
+            <footer>
+                <p>AvorerInc | <a href="../index.html">На главную</a></p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
