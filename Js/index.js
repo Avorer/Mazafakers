@@ -12,7 +12,7 @@ const driversData = [
     { 
         name: "РУЛСАН ГРАНТОВИЧ", 
         car: "ВАЗ-2190 FL", 
-        time_ivanovskoe_forward: "3:29.79", time_ivanovskoe_reverse: "3:34.12",
+        time_ivanovskoe_forward: "3:25.03", time_ivanovskoe_reverse: "3:25.93",
         time_glubokoe_forward: null, time_glubokoe_reverse: null,
         time_raifa_forward: null, time_raifa_reverse: "1:46.27",
         active: true, 
